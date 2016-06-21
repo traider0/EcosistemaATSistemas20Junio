@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.curso.ecosistema</groupId>
+	<artifactId>09-PluginCargo</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>09-PluginCargo Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina</artifactId>
+			<version>RELEASE</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<artifactId>junit</artifactId>
+			<groupId>junit</groupId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>09-PluginCargo</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>1.4.18</version>
+				<configuration>
+					<wait>true</wait>
+					<container>
+						<containerId>tomcat8x</containerId>
+						<!-- Ubicacion del contenedor -->
+						<home>C:\ecosistema\apache-tomcat-8.0.36</home>
+						<type>installed</type>
+					</container>
+					<configuration>
+						<type>existing</type>
+						<!-- Ubicacion a partir de la cual se creará la configuración de despliegue -->
+						<home>C:\ecosistema\apache-tomcat-8.0.36</home>
+						<properties>
+							<cargo.servlet.port>8080</cargo.servlet.port>
+						</properties>
+					</configuration>
+					<deployables>
+						<deployable>
+							<groupId>com.curso.ecosistema</groupId>
+							<artifactId>09-PluginCargo</artifactId>
+							<type>war</type>
+							<pingURL>http://localhost:8080/09-PluginCargo/index.jsp</pingURL>
+						</deployable>
+					</deployables>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
