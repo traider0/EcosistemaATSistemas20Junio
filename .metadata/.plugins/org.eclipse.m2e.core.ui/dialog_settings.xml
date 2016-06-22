@@ -9,9 +9,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="06-Modelo"/>
-			<item value="06-Padre"/>
-			<item value="03-ProyectoSimpleConEclipse"/>
+			<item value="11-Cliente-maven-ejemplo-plugin"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -37,6 +35,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\ecosistema\workspace\10-TestIntegracion"/>
+			<item value="C:\Users\prestamo\Desktop\workspace"/>
 			<item value="C:\ecosistema\workspace"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -88,6 +88,9 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\ecosistema\workspace\11-maven-ejemplo-plugin"/>
+			<item value="C:\ecosistema\workspace\08-PluginSurefire"/>
+			<item value="C:\ecosistema\workspace\07-Profiles"/>
 			<item value="C:\ecosistema\workspace\05-DependenciasWeb"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -101,13 +104,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.06.Modelo"/>
 		</list>
 		<list key="groupId">
-			<item value="com.curso.ecosistema"/>
 		</list>
 		<list key="artifactId">
-			<item value="06-Modelo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
